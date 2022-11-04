@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: amkarmakpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amkarmakpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: amkarmakpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: amkarmakpipelinesjavascriptdocker 
+          image: cicdacrak.azurecr.io/amkarmakpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
